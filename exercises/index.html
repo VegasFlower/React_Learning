@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> JSX Html</title>
+</head>
+<body>
+    <div id="app"> </div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        function getAppName(){
+            return "React"+123
+        }
+
+        function hello(){
+            const isLoggin = false
+            if(isLoggin){
+                return <h1 style={{color:'red'}}>
+                    用户已登录
+                    <div>
+                        <button>登出</button>
+                    </div>
+
+                </h1>
+            }else{
+                return <h1>用户未登录</h1>
+            }
+        }
+        ReactDOM.render(
+            hello(),
+            document.getElementById("app")
+        )
+
+    </script>
+
+</body>
+</html>
