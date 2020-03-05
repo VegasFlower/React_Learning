@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>06</title>
+    <title>06 Handling Events</title>
 </head>
 <body>
     <div id="app"> </div>
@@ -15,7 +15,7 @@
             constructor(props){
                 super(props)
                 this.state = {isToggleOn: true}
-                this.handleClick = this.handleClick.bind(this)
+                //this.handleClick = this.handleClick.bind(this)
             }
 
             handleClick(){
@@ -26,7 +26,7 @@
 
             render(){
                 return (
-                    <button onClick={this.handleClick}>
+                    <button onClick={this.handleClick.bind(this)}>
                         {this.state.isToggleOn ? "yes" : "no"}
                     </button>
                 )
